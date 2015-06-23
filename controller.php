@@ -27,12 +27,12 @@ class bxSliderPackage extends Package {
     }   
 
 	public function uninstall() {
-//		parent::uninstall();
+		parent::uninstall();
 		
 		//drop tables
-//		$db = Loader::db();
-//		$db->Execute('DROP TABLE IF EXISTS `btBxSlider`');
-//		$db->Execute('DROP TABLE IF EXISTS `btBxSliderItems`');
+		$db = Loader::db();
+		$db->Execute('DROP TABLE IF EXISTS `btBxSlider`');
+		$db->Execute('DROP TABLE IF EXISTS `btBxSliderItems`');
 
 	} 
 	
