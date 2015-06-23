@@ -1,0 +1,380 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BxSlider\n"
+"POT-Creation-Date: 2015-06-23 21:08+0100\n"
+"PO-Revision-Date: 2015-06-23 21:08+0100\n"
+"Last-Translator: \n"
+"Language-Team: dSzymczuk <kontakt@dszymczuk.pl>\n"
+"Language: PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-Basepath: /var/www/c5packlh/packages/bxSlider\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /var/www/c5packlh/packages/bxSlider\n"
+
+#: /var/www/c5packlh/packages/bxSlider/controller.php:7
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/add.php:2
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/edit.php:2
+msgid "Access Denied."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/controller.php:16
+msgid "Bx Slider - slider for your website"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/controller.php:20
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/controller.php:97
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/controller.php:101
+msgid "Bx Slider"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/controller.php:106
+msgid "Please choose at least two images."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/controller.php:107
+msgid "No images selected yet."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:17
+msgid "Images"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:18
+msgid "General"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:19
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:190
+msgid "Pager"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:20
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:216
+msgid "Controls"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:21
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:273
+msgid "Auto"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:22
+msgid "Carousel"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:30
+msgid "Add Image"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:58
+msgid "Mode"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:68
+msgid "Speed"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:69
+msgid "Slide transition duration (in ms)"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:75
+msgid "Slide Margin"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:76
+msgid "Margin between each slide"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:82
+msgid "Start Slide"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:83
+msgid "Starting slide index (zero-based)"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:89
+msgid "Random Start"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:90
+msgid "Start slider on a random slide"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:96
+msgid "Infinite Loop"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:97
+msgid ""
+"If checked, clicking \"Next\" while on the last slide will transition to the "
+"first slide and vice-versa"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:103
+msgid "Hide Control On End"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:104
+msgid ""
+"If checked, \"Next\" control will be hidden on last slide and vice-versa ; "
+"Note: Only used when infiniteLoop is unchecked"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:110
+msgid "Captions"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:111
+msgid ""
+"Include image captions. Captions are derived from the image's title attribute"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:116
+msgid "Easing"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:117
+msgid ""
+"The type of \"easing\" to use during transitions. Null is not easing effect"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:124
+msgid "Adaptive Height"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:125
+msgid "Dynamically adjust slider height based on each slide's height"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:131
+msgid "Adaptive Height Speed"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:132
+msgid ""
+"Slide height transition duration (in ms). Note: only used if adaptiveHeight "
+"is checked"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:138
+msgid "Responsive"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:139
+msgid ""
+"Enable or disable auto resize of the slider. Useful if you need to use fixed "
+"width sliders."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:144
+msgid "Preload Images"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:145
+msgid ""
+"If \"all\", preloads all images before starting the slider. If \"visible\", "
+"preloads only images in the initially visible slides before starting the "
+"slider (tip: use \"visible\" if all slides are identical dimensions)"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:152
+msgid "Touch Enabled"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:153
+msgid "If true, slider will allow touch swipe transitions"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:159
+msgid "Swipe Threshold"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:160
+msgid ""
+"Amount of pixels a touch swipe needs to exceed in order to execute a slide "
+"transition. Note: only used if touchEnabled is checked"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:165
+msgid "One To One Touch"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:166
+msgid "If checked, non-fade slides follow the finger as it swipes"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:191
+msgid "If checked, a pager will be added"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:196
+msgid "Pager Type"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:197
+msgid ""
+"If \"full\", a pager link will be generated for each slide. If \"short\", a "
+"x / y pager will be used (ex. 1 / 5)"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:203
+msgid "Pager Short Separator"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:204
+msgid ""
+"If pagerType: \"short\", pager will use this value as the separating "
+"character"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:217
+msgid "If checked, \"Next\" / \"Prev\" controls will be added"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:223
+msgid "Auto Controls"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:224
+msgid "If checked, \"Start\" / \"Stop\" controls will be added"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:229
+msgid "Auto Controls Combine"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:230
+msgid ""
+"When slideshow is playing only \"Stop\" control is displayed and vice-versa"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:236
+msgid "Next Text"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:237
+msgid "Text to be used for the \"Next\" control"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:244
+msgid "Prev Text"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:245
+msgid "Text to be used for the \"Prev\" control"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:250
+msgid "Start Text"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:251
+msgid "Text to be used for the \"Start\" control"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:257
+msgid "Stop Text"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:258
+msgid "Text to be used for the \"Stop\" control"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:274
+msgid "For slice animations"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:279
+msgid "Pause"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:280
+msgid "The amount of time (in ms) between each auto transition"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:285
+msgid "Auto Start"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:286
+msgid ""
+"Auto show starts playing on load. If false, slideshow will start when the "
+"\"Start\" control is clicked"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:291
+msgid "Auto Direction"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:292
+msgid "The direction of auto show slide transitions"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:297
+msgid "Auto Hover"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:298
+msgid "Auto show will pause when mouse hovers over slider"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:303
+msgid "Auto Delay"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:304
+msgid "Time (in ms) auto show should wait before starting"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:328
+msgid "Min slides"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:329
+msgid ""
+"The minimum number of slides to be shown. Slides will be sized down if "
+"carousel becomes smaller than the original size."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:334
+msgid "Max slides"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:335
+msgid ""
+"The maximum number of slides to be shown. Slides will be sized up if "
+"carousel becomes larger than the original size."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:341
+msgid "Move slides"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:342
+msgid ""
+"The number of slides to move on transition. This value must be >= minSlides, "
+"and <= maxSlides. If zero (default), the number of fully-visible slides will "
+"be used."
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:348
+msgid "Slide width"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/form.php:349
+msgid ""
+"The width of each slide. This setting is required for all horizontal "
+"carousels!"
+msgstr ""
+
+#: /var/www/c5packlh/packages/bxSlider/blocks/bx_slider/elements/item_row.php:14
+msgid "Title"
+msgstr ""
