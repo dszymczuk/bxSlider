@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+
+	<table name="btBxSlider">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="fsID" type="I"><unsigned /></field>		
+
+		<field name="mode" type="I"></field>
+		<field name="modeArray " type="I"></field>
+		<field name="speed" type="I"></field>
+		<field name="slideMargin" type="I"></field>
+		<field name="startSlide" type="I"></field>
+		<field name="randomStart" type="I"></field>
+		<field name="infiniteLoop" type="I"></field>
+		<field name="hideControlOnEnd" type="I"></field>
+		<field name="captions" type="I"></field>
+		<field name="easing" type="I"></field>
+		<field name="adaptiveHeight" type="I"></field>
+		<field name="adaptiveHeightSpeed" type="I"></field>
+		<field name="responsive" type="I"></field>
+		<field name="preloadImages" type="I"></field>
+		<field name="touchEnabled" type="I"></field>
+		<field name="swipeThreshold" type="I"></field>
+		<field name="oneToOneTouch" type="I"></field>
+
+		<field name="pager" type="I"></field>
+		<field name="pagerType" type="I"></field>
+		<field name="pagerShortSeparator" type="C" size="50"></field>	
+
+		<field name="controls" type="I"></field>
+		<field name="nextText" type="C" size="50"></field>	
+		<field name="prevText" type="C" size="50"></field>	
+		<field name="autoControls" type="I"></field>
+		<field name="startText" type="C" size="50"></field>	
+		<field name="stopText" type="C" size="50"></field>	
+		<field name="autoControlsCombine" type="I"></field>
+
+		<field name="auto" type="I"></field>
+		<field name="pause" type="I"></field>
+		<field name="autoStart" type="I"></field>
+		<field name="autoDirection" type="I"></field>
+		<field name="autoHover" type="I"></field>
+		<field name="autoDelay" type="I"></field>
+		
+		<field name="minSlides" type="I"></field>
+		<field name="maxSlides" type="I"></field>
+		<field name="moveSlides" type="I"></field>
+		<field name="slideWidth" type="I"></field>
+		
+	</table>
+	
+	<table name="btBxSliderItems">
+		<field name="itemId" type="I">
+			<key />
+			<autoincrement />
+			<unsigned />
+		</field>
+		<field name="bID" type="I"><unsigned /></field>
+		<field name="fID" type="I"><unsigned /></field>
+		<field name="pageID" type="I" ><unsigned /></field> 
+		<field name="itemTitle" type="C" size="255"></field>	
+		<field name="itemDesc" type="X2" ></field>	
+		<field name="itemUrl" type="C" size="255"></field>
+		<field name="groupSet" type="I"></field> 
+		<field name="position" type="I"></field>
+	</table>
+	
+</schema>
