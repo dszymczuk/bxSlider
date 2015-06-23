@@ -34,4 +34,5 @@ You can set any language using gettext.
 License
 ----
 bxSlider - MIT license
+
 BxSlider jQuery Plugin - MIT license
