@@ -94,11 +94,11 @@ class BxsliderBlockController extends BlockController {
 
 
 	public function getBlockTypeDescription() {
-		return t("BX Slider");
+		return t("Bx Slider");
 	}
 	
 	public function getBlockTypeName() {
-		return t("BX Slider");
+		return t("Bx Slider");
 	}
 		
 	public function getJavaScriptStrings() {

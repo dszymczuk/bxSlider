@@ -10,7 +10,7 @@ class bxSliderPackage extends Package {
 
 	protected $pkgHandle = 'bxSlider';
     protected $appVersionRequired = '5.5.0';
-    protected $pkgVersion = '0.1.0';
+    protected $pkgVersion = '0.9.0';
     
 	public function getPackageDescription() {
     	return t("Bx Slider - slider for your website");
@@ -27,12 +27,12 @@ class bxSliderPackage extends Package {
     }   
 
 	public function uninstall() {
-//		parent::uninstall();
+		parent::uninstall();
 		
 		//drop tables
-//		$db = Loader::db();
-//		$db->Execute('DROP TABLE IF EXISTS `btBxSlider`');
-//		$db->Execute('DROP TABLE IF EXISTS `btBxSliderItems`');
+		$db = Loader::db();
+		$db->Execute('DROP TABLE IF EXISTS `btBxSlider`');
+		$db->Execute('DROP TABLE IF EXISTS `btBxSliderItems`');
 
 	} 
 	
