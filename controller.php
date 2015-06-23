@@ -10,7 +10,7 @@ class bxSliderPackage extends Package {
 
 	protected $pkgHandle = 'bxSlider';
     protected $appVersionRequired = '5.5.0';
-    protected $pkgVersion = '0.1.0';
+    protected $pkgVersion = '0.9.0';
     
 	public function getPackageDescription() {
     	return t("Bx Slider - slider for your website");

@@ -6,12 +6,16 @@ bxSlider
 Description
 ----
 
-It is simple add on to create block with image slider support by bxSlider.
+It is simple add on to create block with image slider support by [bxSlider](http://bxslider.com/).
+
 
 
 How to use
 ----
 
+Add Bx Slider block to area, choose images (minimum 2), set up options and done.
+
+It is really simple !
 
 
 
