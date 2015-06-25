@@ -1,0 +1,7 @@
+languages:
+  Ruby: false
+  JavaScript: true
+  PHP: true
+  Python: false
+exclude_paths:
+- "blocks/bx_slider/js/jquery.bxslider.js"
