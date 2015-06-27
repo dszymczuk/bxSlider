@@ -1,29 +1,29 @@
 <?php     
 /**
  * @author Damian Szymczuk
- * @link https://github.com/dszymczuk/bxSlider
+ * @link https://github.com/dszymczuk/dsSliderBx
  * @link http://dszymczuk.pl
  */
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
-class bxSliderPackage extends Package {
+class dsSliderBxPackage extends Package {
 
-	protected $pkgHandle = 'bxSlider';
+	protected $pkgHandle = 'dsSliderBx';
     protected $appVersionRequired = '5.5.0';
     protected $pkgVersion = '0.9.0';
     
 	public function getPackageDescription() {
-    	return t("Bx Slider - slider for your website");
+    	return t("dsSliderBx - slider for your website support by Bx Slider");
     }
 
     public function getPackageName() {
-    	return t("Bx Slider");
+    	return t("dsSliderBx");
     }
 
     public function install() {
     	$pkg = parent::install();
 	    // install block
-        BlockType::installBlockTypeFromPackage('bx_slider', $pkg);
+        BlockType::installBlockTypeFromPackage('ds_slider_bx', $pkg);
     }   
 
 	public function uninstall() {
@@ -31,8 +31,8 @@ class bxSliderPackage extends Package {
 		
 		//drop tables
 		$db = Loader::db();
-		$db->Execute('DROP TABLE IF EXISTS `btBxSlider`');
-		$db->Execute('DROP TABLE IF EXISTS `btBxSliderItems`');
+		$db->Execute('DROP TABLE IF EXISTS `dsSliderBx`');
+		$db->Execute('DROP TABLE IF EXISTS `dsSliderBxItems`');
 
 	} 
 	

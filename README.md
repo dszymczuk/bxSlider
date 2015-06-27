@@ -1,7 +1,7 @@
-bxSlider
+dsSliderBx
 ================
 
-[![Code Climate](https://codeclimate.com/github/dszymczuk/bxSlider/badges/gpa.svg)](https://codeclimate.com/github/dszymczuk/bxSlider)
+[![Code Climate](https://codeclimate.com/github/dszymczuk/bxSlider/badges/gpa.svg)](https://codeclimate.com/github/dszymczuk/dsSliderBx)
 
 Description
 ----
@@ -13,7 +13,7 @@ It is simple add on to create block with image slider support by [bxSlider](http
 How to use
 ----
 
-Add Bx Slider block to area, choose images (minimum 2), set up options and done.
+Add dsSliderBx block to area, choose images (minimum 2), set up options and done.
 
 It is really simple !
 
