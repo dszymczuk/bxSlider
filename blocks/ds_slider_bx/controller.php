@@ -1,13 +1,13 @@
 <?php   
 /**
  * @author Damian Szymczuk
- * @link https://github.com/dszymczuk/bxSlider
+ * @link https://github.com/dszymczuk/dsSliderBx
  * @link http://dszymczuk.pl
  */
 defined('C5_EXECUTE') or die("Access Denied.");
-class BxsliderBlockController extends BlockController {
+class dsSliderBxBlockController extends BlockController {
 	
-	protected $btTable = 'btBxSlider';
+	protected $btTable = 'dsSliderBx';
 	protected $btInterfaceWidth = "850";
 	protected $btInterfaceHeight = "600";
 	
@@ -94,11 +94,11 @@ class BxsliderBlockController extends BlockController {
 
 
 	public function getBlockTypeDescription() {
-		return t("Bx Slider");
+		return t("dsSliderBx");
 	}
 	
 	public function getBlockTypeName() {
-		return t("Bx Slider");
+		return t("dsSliderBx");
 	}
 		
 	public function getJavaScriptStrings() {
@@ -114,19 +114,6 @@ class BxsliderBlockController extends BlockController {
 	
 	}	
 
-	function on_page_view(){
-		// $this->loadResources();
-	}
-
-    //load resource (js, css)
-    private function loadResources(){
-        $hh = Loader::helper('html');
-        $pkg = BlockType::getByHandle($this->btHandle)->getPackageHandle();
-
-        $theme_path = (isset($this->themes[$this->theme])) ? $this->themes[$this->theme].'/'.$this->themes[$this->theme].'.css' : 'default/default.css';
-        $this->addHeaderItem($hh->css('nivo_themes/'.$theme_path, $pkg));
-    }
-	
 	function view() {
 		$this->set('pageID', $this->pageID);
 		$this->setVariables();
@@ -155,7 +142,7 @@ class BxsliderBlockController extends BlockController {
 		$item_data = array( 
 						  (int)$this->bID
 						  );
-		$db->query("DELETE FROM `btBxSliderItems` WHERE bID=? ", $item_data);
+		$db->query("DELETE FROM `dsSliderBxItems` WHERE bID=? ", $item_data);
 		parent::delete();
 	}
 	
@@ -164,7 +151,7 @@ class BxsliderBlockController extends BlockController {
        $this->getItems();
        $db = Loader::db();
        foreach($this->items as $item) {
-         $db->Execute('INSERT INTO `btBxSliderItems` (`bID`, `fID`, `itemTitle`, `itemDesc`, `itemUrl`, `position`) VALUES 
+         $db->Execute('INSERT INTO `dsSliderBxItems` (`bID`, `fID`, `itemTitle`, `itemDesc`, `itemUrl`, `position`) VALUES
                   (?,?,?,?,?,?)', 
             array($nbID, $item['fID'], $item['itemTitle'], $item['itemDesc'], $item['itemURL'], $item['position'])
          );      
@@ -211,13 +198,13 @@ class BxsliderBlockController extends BlockController {
 
 		parent::save($data);
 			
-		//save selected images at the child table ( btBxSliderImg )
+		//save selected images at the child table ( dsSliderBxImg )
 		$db = Loader::db();
 		//delete existing images
 		$item_data = array( 
 						  (int)$this->bID
 						  );
-		$db->query("DELETE FROM `btBxSliderItems` WHERE bID=?", $item_data);
+		$db->query("DELETE FROM `dsSliderBxItems` WHERE bID=?", $item_data);
 		
 		//loop through and add the images
 		$pos=0;
@@ -235,7 +222,7 @@ class BxsliderBlockController extends BlockController {
 							  $item_url,
 							  $pos
 							  );
-			$db->query("INSERT INTO `btBxSliderItems` 
+			$db->query("INSERT INTO `dsSliderBxItems`
 					   (`bID`, `fID`, `itemTitle`, `itemDesc`, `itemUrl`, `position`) VALUES 
 					   (?,?,?,?,?,?)"
 					   ,$item_data
@@ -250,7 +237,7 @@ class BxsliderBlockController extends BlockController {
 			$this->set('items', $this->items);
 			return;
 		}
-		$sql = sprintf("SELECT * FROM btBxSliderItems WHERE bID=%d ORDER BY position", $this->bID);
+		$sql = sprintf("SELECT * FROM dsSliderBxItems WHERE bID=%d ORDER BY position", $this->bID);
 		$db = Loader::db();
 		$this->items = $db->getAll($sql); 
 		
@@ -343,9 +330,9 @@ class BxsliderBlockController extends BlockController {
 	 * Called by edit() and add()
 	 */
 	private function includeUIElements() {
-		
+
 	}
-	
+
 }
 
 ?>
