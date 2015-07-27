@@ -77,6 +77,7 @@ class dsSliderBxBlockController extends BlockController {
     Auto
     */
 	public $default_auto = 0; // false ; Slides will automatically transition
+	public $default_stopAutoOnClick = 0; // false ; Auto will stop on interaction with controls
     public $default_pause = 4000; // The amount of time (in ms) between each auto transition
     public $default_autoStart = 1; // true ; Auto show starts playing on load. If false, slideshow will start when the "Start" control is clicked
     public $default_autoDirection = 0; // The direction of auto show slide transitions
@@ -186,6 +187,7 @@ class dsSliderBxBlockController extends BlockController {
 		$data['stopText'] = (string)substr(trim($data['stopText']), 0, 48);
 		$data['autoControlsCombine'] = $data['autoControlsCombine'] ? 1 : 0;
 		$data['auto'] = $data['auto'] ? 1 : 0;
+		$data['stopAutoOnClick'] = $data['stopAutoOnClick'] ? 1 : 0;
 		$data['pause'] = (int)$data['pause'];
 		$data['autoStart'] = $data['autoStart'] ? 1 : 0;
 		$data['autoDirection'] = (int)$data['autoDirection'];
@@ -310,6 +312,7 @@ class dsSliderBxBlockController extends BlockController {
 		Auto
 		*/
 		$this->set('auto', isset($this->auto)?$this->auto:$this->default_auto);
+		$this->set('stopAutoOnClick', isset($this->stopAutoOnClick)?$this->stopAutoOnClick:$this->default_stopAutoOnClick);
 		$this->set('pause', isset($this->pause)?$this->pause:$this->default_pause);
 		$this->set('autoStart', isset($this->autoStart)?$this->autoStart:$this->default_autoStart);
 		$this->set('autoDirection', isset($this->autoDirection)?$this->autoDirection:$this->default_autoDirection);
