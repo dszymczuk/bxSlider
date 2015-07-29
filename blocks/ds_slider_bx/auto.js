@@ -117,28 +117,27 @@ var SlideshowBlock = {
             }
         }
         return qIDs;
-    }
+    },
 
-    //validate:function(){
-    //    var failed=0;
-    //
-    //    qIDs=this.serialize();
-    //    if( qIDs.length<2 ){
-    //        alert(ccm_t('choose-min-2'));
-    //        $('#ccm-slideshowBlock-AddItem').focus();
-    //        failed=1;
-    //    }
-    //    if(failed){
-    //        ccm_isBlockError=1;
-    //        return false;
-    //    }
-    //    testDsSlider();
-    //    return true;
-    //}
+    validate:function(){
+        var failed=0;
+
+        qIDs=this.serialize();
+        if( qIDs.length<2 ){
+            alert(ccm_t('choose-min-2'));
+            $('#ccm-slideshowBlock-AddItem').focus();
+            failed=1;
+        }
+        if(failed){
+            ccm_isBlockError=1;
+            return false;
+        }
+        return true;
+    }
 }
 
 
-//ccmValidateBlockForm = function() { return SlideshowBlock.validate(); }
+ccmValidateBlockForm = function() { return SlideshowBlock.validate(); }
 ccm_chooseAsset = function(obj) { SlideshowBlock.selectObj(obj); };
 
 
@@ -162,15 +161,3 @@ sliderShowPane = function (pane){
 $(function() {
     sliderTabSetup();
 });
-
-function testDsSlider(){
-    console.log("testDsSlider");
-    $("#ccm-block-form").validate({
-        rules: {
-            speed: {
-                required: true,
-                number: true
-            }
-        }
-    });
-}

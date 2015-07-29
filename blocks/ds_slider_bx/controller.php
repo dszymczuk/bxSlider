@@ -233,34 +233,61 @@ class dsSliderBxBlockController extends BlockController {
 		}
 	}
 
+
     function validate($args) {
-        $error = Loader::helper('validation/error');
-        $isNotEmptyNumberMsg = ' is empty or is not number';
-        $isNotEmptyNumberMoreZero = ' is empty, is not number or is under zero';
 
-        if($this->isNotEmptyNumber($args['speed']))
-        {
-            $error->add(t('Speed').$isNotEmptyNumberMsg);
-        }
+    $error = Loader::helper('validation/error');
+    $isNotEmptyNumberMsg = t(' is empty or not number');
+    $isNotEmptyNumberMoreZeroMsg = t(' is empty, not number or under zero');
+    $isNotEmptyMsg = t(' is empty');
 
+    if($this->isNotEmptyNumberMoreZero($args['speed']))
+        $error->add(t('Speed').$isNotEmptyNumberMsg);
 
-//        speed = 500; //Slide transition duration (in ms)
-//        slideMargin = 0; //Margin between each slide
-//        startSlide = 0; //Starting slide index (zero-based)
-//        adaptiveHeightSpeed = 500; //Slide height transition duration (in ms). Note: only used if adaptiveHeight: true
-//        swipeThreshold = 50; //Amount of pixels a touch swipe needs to exceed in order to execute a slide transition. Note: only used if touchEnabled: true
-//        pagerShortSeparator = "/"; // If pagerType: 'short', pager will use this value as the separating character
-//        nextText = 'Next'; //Text to be used for the "Next" control
-//        prevText = 'Prev'; //Text to be used for the "Prev" control
-//        startText = "Start"; // Text to be used for the "Start" control
-//        stopText = "Stop"; // Text to be used for the "Stop" control
-//        pause = 4000; // The amount of time (in ms) between each auto transition
-//        autoDelay = 0; // Time (in ms) auto show should wait before starting
-//        minSlides = 1; //The minimum number of slides to be shown. Slides will be sized down if carousel becomes smaller than the original size.
-//        maxSlides = 1; //The maximum number of slides to be shown. Slides will be sized up if carousel becomes larger than the original size.
-//        moveSlides = 0; //The number of slides to move on transition. This value must be >= minSlides, and <= maxSlides. If zero (default), the number of fully-visible slides will be used.
-//        slideWidth = 0; //The width of each slide. This setting is required for all horizontal carousels!
+    if($this->isNotEmptyNumberMoreZero($args['slideMargin']))
+        $error->add(t('Slide Margin').$isNotEmptyNumberMoreZeroMsg);
 
+    if($this->isNotEmptyNumberMoreZero($args['startSlide']))
+        $error->add(t('Start Slide').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['adaptiveHeightSpeed']))
+        $error->add(t('Adaptive Height Speed').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['swipeThreshold']))
+        $error->add(t('Swipe Threshold').$isNotEmptyNumberMsg);
+
+    if($this->isNotEmpty($args['pagerShortSeparator']))
+        $error->add(t('Pager Short Separator').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['nextText']))
+        $error->add(t('Next Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['prevText']))
+        $error->add(t('Prev Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['startText']))
+        $error->add(t('Start Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['stopText']))
+        $error->add(t('Stop Text').$isNotEmptyMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['pause']))
+        $error->add(t('Pause').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['autoDelay']))
+        $error->add(t('Auto Delay').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['minSlides']))
+        $error->add(t('Min Slides').$isNotEmptyNumberMoreZeroMsg);
+        
+    if($this->isNotEmptyNumberMoreZero($args['maxSlides']))
+        $error->add(t('Max Slides').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['moveSlides']))
+        $error->add(t('Move Slides').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['slideWidth']))
+        $error->add(t('Slide Width').$isNotEmptyNumberMoreZeroMsg);
 
         return $error;
     }
@@ -371,7 +398,7 @@ class dsSliderBxBlockController extends BlockController {
 
     private function isNotEmptyNumber($value){
         $trimedValue = trim($value);
-        if(empty($trimedValue) || !is_numeric($trimedValue))
+        if($trimedValue == '' || !is_numeric($trimedValue))
             return true;
         return false;
     }
@@ -379,6 +406,14 @@ class dsSliderBxBlockController extends BlockController {
     private function isNotEmptyNumberMoreZero($value){
         $trimedValue = trim($value);
         if($this->isNotEmptyNumber($trimedValue) || $trimedValue < 0)
+            return true;
+        return false;
+    }
+
+    private function isNotEmpty($value)
+    {
+        $trimedValue = trim($value);
+        if(empty($trimedValue))
             return true;
         return false;
     }
