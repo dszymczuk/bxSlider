@@ -10,7 +10,7 @@ class dsSliderBxPackage extends Package {
 
 	protected $pkgHandle = 'dsSliderBx';
     protected $appVersionRequired = '5.5.0';
-    protected $pkgVersion = '0.9.0';
+    protected $pkgVersion = '0.9.1';
     
 	public function getPackageDescription() {
     	return t("dsSliderBx - slider for your website support by Bx Slider");
