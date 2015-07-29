@@ -115,10 +115,24 @@ class dsSliderBxBlockController extends BlockController {
 	
 	}	
 
-	function view() {
+	function on_page_view() {
 		$this->set('pageID', $this->pageID);
 		$this->setVariables();
 		$this->getItems();
+
+        if(method_exists($this->getBlockObject(),'getProxyBlock'))
+        {
+            $this->set(
+                'blockIdentifier',
+                $this->getBlockObject()->getProxyBlock()
+                    ? $this->getBlockObject()->getProxyBlock()->getInstance()->getIdentifier()
+                    : $this->getIdentifier()
+            );
+        }
+        else
+        {
+            $this->set('blockIdentifier',rand(12,512));
+        }
 	}
 
 	function add() {
