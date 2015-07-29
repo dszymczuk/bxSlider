@@ -6,7 +6,7 @@
  */
 defined('C5_EXECUTE') or die("Access Denied."); 
 ?>
-        <ul id="<?php  echo "bxSlider-".$bID; ?>" class="bxslider" style="display:none">
+        <ul id="<?php  echo "bxSlider-".$blockIdentifier; ?>" class="bxslider" style="display:none">
         <?php foreach($items as $item): ?>
                 <li><img
                         src="<?php echo $item['itemImageSrc']; ?>" 
@@ -20,9 +20,9 @@ defined('C5_EXECUTE') or die("Access Denied.");
 <script type="text/javascript">
 $(document).ready(function() {
 
-        $('<?php  echo "#bxSlider-".$bID; ?>').css("display","block");
+        $('<?php  echo "#bxSlider-".$blockIdentifier; ?>').css("display","block");
 
-        $('<?php  echo "#bxSlider-".$bID; ?>').bxSlider({
+        $('<?php  echo "#bxSlider-".$blockIdentifier; ?>').bxSlider({
                 mode : '<?php echo $modeArray[$mode]; ?>',     
                 speed : <?php echo $speed; ?>,
                 slideMargin : <?php echo $slideMargin; ?>,
