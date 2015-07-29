@@ -77,6 +77,7 @@ class dsSliderBxBlockController extends BlockController {
     Auto
     */
 	public $default_auto = 0; // false ; Slides will automatically transition
+	public $default_stopAutoOnClick = 0; // false ; Auto will stop on interaction with controls
     public $default_pause = 4000; // The amount of time (in ms) between each auto transition
     public $default_autoStart = 1; // true ; Auto show starts playing on load. If false, slideshow will start when the "Start" control is clicked
     public $default_autoDirection = 0; // The direction of auto show slide transitions
@@ -186,6 +187,7 @@ class dsSliderBxBlockController extends BlockController {
 		$data['stopText'] = (string)substr(trim($data['stopText']), 0, 48);
 		$data['autoControlsCombine'] = $data['autoControlsCombine'] ? 1 : 0;
 		$data['auto'] = $data['auto'] ? 1 : 0;
+		$data['stopAutoOnClick'] = $data['stopAutoOnClick'] ? 1 : 0;
 		$data['pause'] = (int)$data['pause'];
 		$data['autoStart'] = $data['autoStart'] ? 1 : 0;
 		$data['autoDirection'] = (int)$data['autoDirection'];
@@ -230,6 +232,65 @@ class dsSliderBxBlockController extends BlockController {
 			$pos++;
 		}
 	}
+
+
+    function validate($args) {
+
+    $error = Loader::helper('validation/error');
+    $isNotEmptyNumberMsg = t(' is empty or not number');
+    $isNotEmptyNumberMoreZeroMsg = t(' is empty, not number or under zero');
+    $isNotEmptyMsg = t(' is empty');
+
+    if($this->isNotEmptyNumberMoreZero($args['speed']))
+        $error->add(t('Speed').$isNotEmptyNumberMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['slideMargin']))
+        $error->add(t('Slide Margin').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['startSlide']))
+        $error->add(t('Start Slide').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['adaptiveHeightSpeed']))
+        $error->add(t('Adaptive Height Speed').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['swipeThreshold']))
+        $error->add(t('Swipe Threshold').$isNotEmptyNumberMsg);
+
+    if($this->isNotEmpty($args['pagerShortSeparator']))
+        $error->add(t('Pager Short Separator').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['nextText']))
+        $error->add(t('Next Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['prevText']))
+        $error->add(t('Prev Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['startText']))
+        $error->add(t('Start Text').$isNotEmptyMsg);
+
+    if($this->isNotEmpty($args['stopText']))
+        $error->add(t('Stop Text').$isNotEmptyMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['pause']))
+        $error->add(t('Pause').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['autoDelay']))
+        $error->add(t('Auto Delay').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['minSlides']))
+        $error->add(t('Min Slides').$isNotEmptyNumberMoreZeroMsg);
+        
+    if($this->isNotEmptyNumberMoreZero($args['maxSlides']))
+        $error->add(t('Max Slides').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['moveSlides']))
+        $error->add(t('Move Slides').$isNotEmptyNumberMoreZeroMsg);
+
+    if($this->isNotEmptyNumberMoreZero($args['slideWidth']))
+        $error->add(t('Slide Width').$isNotEmptyNumberMoreZeroMsg);
+
+        return $error;
+    }
 
 	private function getItems(){
 		if(intval($this->bID) == 0) {
@@ -310,6 +371,7 @@ class dsSliderBxBlockController extends BlockController {
 		Auto
 		*/
 		$this->set('auto', isset($this->auto)?$this->auto:$this->default_auto);
+		$this->set('stopAutoOnClick', isset($this->stopAutoOnClick)?$this->stopAutoOnClick:$this->default_stopAutoOnClick);
 		$this->set('pause', isset($this->pause)?$this->pause:$this->default_pause);
 		$this->set('autoStart', isset($this->autoStart)?$this->autoStart:$this->default_autoStart);
 		$this->set('autoDirection', isset($this->autoDirection)?$this->autoDirection:$this->default_autoDirection);
@@ -332,6 +394,29 @@ class dsSliderBxBlockController extends BlockController {
 	private function includeUIElements() {
 
 	}
+
+
+    private function isNotEmptyNumber($value){
+        $trimedValue = trim($value);
+        if($trimedValue == '' || !is_numeric($trimedValue))
+            return true;
+        return false;
+    }
+
+    private function isNotEmptyNumberMoreZero($value){
+        $trimedValue = trim($value);
+        if($this->isNotEmptyNumber($trimedValue) || $trimedValue < 0)
+            return true;
+        return false;
+    }
+
+    private function isNotEmpty($value)
+    {
+        $trimedValue = trim($value);
+        if(empty($trimedValue))
+            return true;
+        return false;
+    }
 
 }
 

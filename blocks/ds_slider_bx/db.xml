@@ -39,6 +39,7 @@
 		<field name="autoControlsCombine" type="I"></field>
 
 		<field name="auto" type="I"></field>
+		<field name="stopAutoOnClick" type="I"></field>
 		<field name="pause" type="I"></field>
 		<field name="autoStart" type="I"></field>
 		<field name="autoDirection" type="I"></field>

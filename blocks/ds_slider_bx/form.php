@@ -271,9 +271,16 @@ $ah = Loader::helper('concrete/interface');
 
     <div class="ccm-block-field-group">
         <h4><?php  echo t('Auto')?></h4>
-        <p class="muted"><?php  echo t('For slice animations')?></p>
+        <p class="muted"><?php  echo t('Slides will automatically transition')?></p>
         <?php  echo $form->checkbox('auto', 1, $auto, array()); ?>
     </div>
+
+            <div class="ccm-block-field-group">
+                <h4><?php  echo t('Stop Auto On Click')?></h4>
+                <p class="muted"><?php  echo t('Auto will stop on interaction with controls')?></p>
+                <?php  echo $form->checkbox('stopAutoOnClick', 1, $stopAutoOnClick, array()); ?>
+            </div>
+
 
     <div class="ccm-block-field-group">
         <h4><?php  echo t('Pause')?></h4>
