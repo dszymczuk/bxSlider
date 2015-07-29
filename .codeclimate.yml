@@ -4,5 +4,5 @@ languages:
   PHP: true
   Python: false
 exclude_paths:
-- "blocks/bx_slider/js/jquery.bxslider.js"
-- "blocks/bx_slider/controller.php"
+- "blocks/ds_slider_bx/js/jquery.bxslider.js"
+- "blocks/ds_slider_bx/controller.php"
