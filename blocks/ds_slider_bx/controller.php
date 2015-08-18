@@ -115,7 +115,7 @@ class dsSliderBxBlockController extends BlockController {
 	
 	}	
 
-	function on_page_view() {
+	function view() {
 		$this->set('pageID', $this->pageID);
 		$this->setVariables();
 		$this->getItems();
