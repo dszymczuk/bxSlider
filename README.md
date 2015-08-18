@@ -21,10 +21,12 @@ It is really simple !
 
 Version
 ----
-0.9.1
+0.9.2
 
 Changelog
 ----
+0.9.2 - Sliding fix
+
 0.9.1 - Add validation
 
 0.9 - PRB submission
