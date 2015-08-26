@@ -21,10 +21,12 @@ It is really simple !
 
 Version
 ----
-0.9.2
+0.9.3
 
 Changelog
 ----
+0.9.3 - Fix for Greek Yogurt theme
+
 0.9.2 - Sliding fix
 
 0.9.1 - Add validation
